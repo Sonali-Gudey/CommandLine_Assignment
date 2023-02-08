@@ -12,7 +12,8 @@ function check_prime(){
     fi
 
     i=2
-    while [[ $i -le $((n/2)) ]]
+    sqrt_num=$(echo "sqrt($n)" | bc)
+    while [[ $i -le $(($sqrt_num)) ]]
     do
         if [[ $(($n%$i)) -eq 0 ]]; then
         echo "$n is Not a Prime number"
